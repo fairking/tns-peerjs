@@ -9,16 +9,17 @@
     </RadSideDrawer>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from "vue";
   import {SlideInOnTopTransition} from 'nativescript-ui-sidedrawer';
 
-  export default {
+  export default Vue.extend({
     data() {
       return {
         transition: new SlideInOnTopTransition()
       }
     }
-  }
+  });
 </script>
 
 <style scoped lang="scss">

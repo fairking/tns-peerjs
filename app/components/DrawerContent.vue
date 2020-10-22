@@ -49,16 +49,17 @@
     </GridLayout>
 </template>
 
-<script>
-  import Home from "./Home";
-  import Browse from "./Browse";
-  import Featured from "./Featured";
-  import Search from "./Search";
-  import Settings from "./Settings";
+<script lang="ts">
+  import Vue from "vue";
+  import Home from "./Home.vue";
+  import Browse from "./Browse.vue";
+  import Featured from "./Featured.vue";
+  import Search from "./Search.vue";
+  import Settings from "./Settings.vue";
   import * as utils from "~/shared/utils";
   import SelectedPageService from "~/shared/selected-page-service";
 
-  export default {
+  export default Vue.extend({
     mounted() {
       SelectedPageService.getInstance().selectedPage$
         .subscribe((selectedPage) => this.selectedPage = selectedPage);
@@ -88,7 +89,7 @@
         utils.closeDrawer();
       }
     }
-  };
+  });
 </script>
 
 <style scoped lang="scss">

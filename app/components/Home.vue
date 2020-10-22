@@ -29,10 +29,10 @@
   import Vue from "vue";
   import * as utils from "~/shared/utils";
   import SelectedPageService from "../shared/selected-page-service";
+  import SimplePeerJs from "simple-peerjs";
   import wrtc from "wrtc";
   import fetch from "node-fetch";
   import WebSocket from "ws";
-  import SimplePeerJs from "simple-peerjs";
 
   export default Vue.extend({
     data() {
@@ -68,7 +68,8 @@
       }
     },
     destroyed() {
-      this.peer.disconnect();
+      if (this.peer)
+        this.peer.disconnect();
       //if (this.peerConnection)
           //this.peerConnection.close();
       //this.peerConnected = false;

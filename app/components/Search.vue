@@ -25,11 +25,12 @@
     </Page>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from "vue";
   import * as utils from "~/shared/utils";
   import SelectedPageService from "../shared/selected-page-service";
 
-  export default {
+  export default Vue.extend({
     mounted() {
       SelectedPageService.getInstance().updateSelectedPage("Search");
     },
@@ -43,7 +44,7 @@
         utils.showDrawer();
       }
     }
-  };
+  });
 </script>
 
 <style scoped lang="scss">
