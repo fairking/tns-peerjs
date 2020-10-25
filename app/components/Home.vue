@@ -26,32 +26,30 @@
 </template>
 
 <script lang="ts">
-  import Vue from "vue";
-  import * as utils from "~/shared/utils";
-  import SelectedPageService from "../shared/selected-page-service";
-  import SimplePeerJs from "simple-peerjs";
-  import wrtc from "wrtc";
-  import fetch from "node-fetch";
-  import WebSocket from "ws";
+    import Vue from "vue";
+    import * as utils from "~/shared/utils";
+    import SelectedPageService from "../shared/selected-page-service";
+    import SimplePeerJs from "simple-peerjs";
+    import { WebRTC } from 'nativescript-webrtc-plugin';
+    require("nativescript-websockets");
 
   export default Vue.extend({
     data() {
-            return {
-                id: "",
-                message: "",
-                info: "",
-                otherPeerId: "",
-                otherPeerReply: "",
-                peerConnected: false,
-            };
-        },
+        return {
+            id: "",
+            info: "",
+            otherPeerId: "",
+            otherPeerReply: "",
+            peerConnected: false,
+        };
+    },
     created() {
       this.id = Math.random().toString(16);
       this.peer = new SimplePeerJs({
         id: this.id,
-        wrtc,
-        fetch,
-        WebSocket
+        wrtc: WebRTC,
+        fetch: fetch,
+        WebSocket: WebSocket
       });
     },
     mounted() {

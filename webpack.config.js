@@ -144,11 +144,13 @@ module.exports = env => {
         },
         node: {
             // Disable node shims that conflict with NativeScript
-            "http": false,
+            "http": 'empty',
             "timers": false,
             "setImmediate": false,
             "fs": "empty",
             "__dirname": false,
+            "net": 'empty',
+            "tls": 'empty',
         },
         devtool: hiddenSourceMap ? "hidden-source-map" : (sourceMap ? "inline-source-map" : "none"),
         optimization: {

@@ -33,12 +33,11 @@
     "@nativescript/theme": "~2.3.0",
     "nativescript-ui-sidedrawer": "~9.0.0",
     "nativescript-vue": "~2.8.0",
+    "nativescript-webrtc-plugin": "^1.0.2",
+    "nativescript-websockets": "^1.5.5",
     "rxjs": "^6.6.0",
-    "vue": "^2.6.12",
     "simple-peerjs": "^1.0.1",
-    "wrtc": "^0.4.6",
-    "node-fetch": "^2.6.1",
-    "ws": "^7.3.1"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "~7.1.0",
@@ -49,8 +48,8 @@
     "nativescript-dev-typescript": "~0.10.0",
     "nativescript-vue-template-compiler": "~2.8.0",
     "node-sass": "^4.7.1",
-    "vue-loader": "~15.9.3",
-    "typescript": "~3.9.0"
+    "typescript": "~3.9.0",
+    "vue-loader": "~15.9.3"
   },
   "gitHead": "f282c57dc05817a655bca5e81ce9d7228ae70d4c",
   "private": "true",
